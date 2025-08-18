@@ -1,12 +1,12 @@
+
 const UserProfile = ({ name, age, bio }) => {
   return (
     <div>
-      <h2>{name}MalcoLm Odhiambo</h2>
-      <p>Age: {28}</p>
-      <p>Bio: {Passionate about technology, always eager to learn new skills, and enjoys solving challenging problems}</p>
+      <h2>{name}</h2>
+      <p>Age: {age}</p>
+      <p>Bio: {bio}</p>
     </div>
   );
 };
 
 export default UserProfile;
-

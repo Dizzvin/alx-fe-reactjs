@@ -1,9 +1,7 @@
-function Footer() {
+export default function Footer() {
   return (
     <footer>
-      <p>© 2023 City Lovers</p>
+      <p>© 2025 My Website</p>
     </footer>
   );
 }
-
-export default Footer;
