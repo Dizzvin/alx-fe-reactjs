@@ -1,32 +1,37 @@
-import UserProfile from "./UserProfile";
+import UserProfile from "./UserProfile.jsx";
 
-function MainContent() {
+function MainContent({ profiles }) {
   return (
-    <main style={{ padding: '20px', backgroundColor: '#f0f8ff', minHeight: '100vh' }}>
-      <h2 style={{ color: 'darkslategray', textAlign: 'center', marginBottom: '20px' }}>
+    <main
+      style={{
+        padding: "20px",
+        backgroundColor: "#f0f8ff",
+        minHeight: "60vh"
+      }}
+    >
+      <h2
+        style={{
+          color: "darkslategray",
+          textAlign: "center",
+          marginBottom: "20px"
+        }}
+      >
         Featured Profiles
       </h2>
 
-      <p style={{ textAlign: 'center' }}>I love to visit New York, Paris, and Tokyo.</p>
+      <p style={{ textAlign: "center" }}>
+        I love to visit New York, Paris, and Tokyo.
+      </p>
 
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-        <UserProfile 
-          name="Malcolm Odhiambo" 
-          age={28} 
-          bio="Passionate about technology, always eager to learn new skills, and enjoys solving challenging problems" 
-        />
-
-        <UserProfile 
-          name="Alice" 
-          age={25} 
-          bio="Loves hiking and photography" 
-        />
-
-        <UserProfile 
-          name="James" 
-          age={30} 
-          bio="Avid traveler and foodie" 
-        />
+      <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+        {profiles.map((profile, index) => (
+          <UserProfile
+            key={index}
+            name={profile.name}
+            age={profile.age}
+            bio={profile.bio}
+          />
+        ))}
       </div>
     </main>
   );

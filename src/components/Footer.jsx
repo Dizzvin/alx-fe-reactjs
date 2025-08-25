@@ -1,10 +1,16 @@
-function Footer() {
+export default function Footer() {
   return (
-    <footer style={{ backgroundColor: 'navy', color: 'white', textAlign: 'center', padding: '10px', marginTop: '20px' }}>
-      <p>&copy; 2025 My Favorite Cities. All rights reserved.</p>
+    <footer
+      style={{
+        backgroundColor: '#0f172a',
+        color: '#e2e8f0',
+        textAlign: 'center',
+        padding: '12px 16px',
+        marginTop: 'auto',
+      }}
+    >
+      <small>&copy; {new Date().getFullYear()} My Favorite Cities</small>
     </footer>
   );
 }
-
-export default Footer;
 
