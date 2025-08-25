@@ -7,10 +7,6 @@ function MainContent() {
         Featured Profiles
       </h2>
 
-      <p style={{ textAlign: 'center', fontSize: '16px', color: 'dimgray' }}>
-         I love to visit New York, Paris, and Tokyo.
-        </p>
-
       <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
         <UserProfile 
           name="Malcolm Odhiambo" 
