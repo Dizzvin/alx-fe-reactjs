@@ -1,22 +1,37 @@
-import UserProfile from "./UserProfile";
+import UserProfile from "./UserProfile.jsx";
 
-function MainContent() {
+export default function MainContent({ profiles }) {
   return (
     <main
       style={{
-          padding: "20px",
-          backgroundColor: "#f0f8ff",
-          minHeight: "200px",
+        padding: "20px",
+        backgroundColor: "#f0f8ff",
+        minHeight: "60vh"
+      }}
+    >
+      <h2
+        style={{
+          color: "darkslategray",
           textAlign: "center",
-         }}
-       >
-        <h2 style={{ color: "darkslategray" }}>Welcome to My Favorite Cities</h2>
-        <p style={{ fontSize: "16px", marginTop: "10px" }}>
-          Explore user profiles and learn more about their favorite places.
+          marginBottom: "20px"
+        }}
+      >
+        Featured Profiles
+      </h2>
+
+      <p style={{ textAlign: "center" }}>
+        "I love to visit New York, Paris, and Tokyo."
       </p>
+
+      {profiles.map((profile, index) => (
+        <UserProfile
+          key={index}
+          name={profile.name}
+          age={profile.age}
+          bio={profile.bio}
+        />
+      ))}
     </main>
   );
 }
-
-export default MainContent;
 
