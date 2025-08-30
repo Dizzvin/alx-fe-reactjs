@@ -1,8 +1,8 @@
-function WelcomeMessage() {
+function WelcomeMessage({ title, subtitle }) {
   return (
     <div>
-      <h1>Hello everyone, I am learning React at ALX!</h1>
-      <p>I am learning about JSX!</p>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
     </div>
   );
 }

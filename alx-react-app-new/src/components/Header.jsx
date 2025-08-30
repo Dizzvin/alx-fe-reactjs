@@ -1,6 +1,13 @@
 function Header() {
   return (
-    <header style={{ backgroundColor: 'navy', color: 'mhite', textAlign: 'center', padding: '20x' }}>
+    <header
+       style={{
+        backgroundColor: "navy blue",
+        color: "white",
+        textAlign: "center",
+        padding: "20px",
+      }}
+    >
       <h1>My Favorite Cities</h1>
     </header>
   );
