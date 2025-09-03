@@ -1,7 +1,6 @@
-
 const UserProfile = ({ name, age, bio }) => {
   return (
-    <div>
+    <div
       style={{
         border: "1px solid #ccc",
         borderRadius: "10px",
